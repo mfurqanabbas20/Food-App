@@ -1,0 +1,51 @@
+.header {
+    height: 34vw;
+    position: relative
+}
+.header-context {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.5vw;
+    max-width: 100%;
+    top: 80px;
+    left: 6vw;
+    animation: fadeIn 3s;
+}
+.header-context h2 {
+    font-weight: 600;
+    color: black;
+    font-size: max(5vw, 22px);
+}
+.header-context p{
+    color: black;
+    font-size: 1.2vw;
+
+}
+.header-context button {
+    border: none;
+    color: #747474;
+    font-weight: 500;
+    padding: 1vw 2.3vw;
+    background-color: white;
+    font-size: max(1vw, 13px);
+    border-radius: 50px;
+}
+
+@media (max-width: 1050px) {
+    .header-context{
+        max-width: 45%;
+    }
+}
+@media (max-width: 750px) {
+    .header-context{
+        max-width: 75%;
+    }
+    .header-context p {
+        display: none;
+    }
+    .header-context button {
+        padding: 2vw 4vw;
+    }
+}

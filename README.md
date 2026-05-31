@@ -1,4 +1,4 @@
-# 🍔 Food App — Full-Stack Food Ordering & Delivery Platform
+# Food App — Full-Stack Food Ordering & Delivery Platform
 
 > A MERN-stack food delivery application with a customer storefront, a Stripe-powered checkout, and a dedicated admin dashboard for managing menus and orders.
 
@@ -13,59 +13,59 @@
 
 ---
 
-## 📖 Overview
+## Overview
 
-**Food App** is a full-stack food ordering and delivery platform built on the MERN stack (MongoDB, Express, React, Node.js). It lets customers browse a categorized food menu, manage a shopping cart, securely pay through Stripe Checkout, and track their order status — while administrators manage the catalog and fulfil orders through a separate dashboard.
+Food App is a full-stack food ordering and delivery platform built on the MERN stack (MongoDB, Express, React, Node.js). Customers can browse a categorized food menu, manage a shopping cart, pay through Stripe Checkout, and track their order status, while administrators manage the catalog and fulfil orders through a separate dashboard.
 
 The project is organized as three independent applications that work together:
 
 | App | Description | Stack |
 | --- | --- | --- |
-| **`backend`** | REST API handling auth, food catalog, cart, orders, payments, and image uploads | Node.js · Express · MongoDB |
-| **`frontend`** | Customer-facing storefront for browsing, ordering, and tracking | React · Vite |
-| **`admin`** | Admin dashboard for adding food, listing items, and managing orders | React · Vite |
+| `backend` | REST API handling auth, food catalog, cart, orders, payments, and image uploads | Node.js · Express · MongoDB |
+| `frontend` | Customer-facing storefront for browsing, ordering, and tracking | React · Vite |
+| `admin` | Admin dashboard for adding food, listing items, and managing orders | React · Vite |
 
-It solves the common problem of running an online food business end-to-end: catalog management, authenticated customer carts, real payment processing, and order fulfilment — all in one self-hostable codebase.
+It covers running an online food business end-to-end: catalog management, authenticated customer carts, payment processing, and order fulfilment in one self-hostable codebase.
 
 ---
 
-## ✨ Features
+## Features
 
 ### Customer (Frontend)
-- 🔐 **User authentication** — register & login with JWT-based sessions and bcrypt-hashed passwords.
-- 🍽️ **Browse menu by category** — explore food items filtered by category.
-- 🛒 **Cart management** — add/remove items with quantities, persisted per logged-in user.
-- 💳 **Stripe Checkout** — secure hosted payment flow with delivery charges applied.
-- ✅ **Payment verification** — order is confirmed or rolled back based on payment outcome.
-- 📦 **My Orders** — view past orders with live status (e.g. *Food Processing*, etc.).
-- 📱 **App download & footer sections** — marketing/landing components included.
+- **User authentication** — register and login with JWT-based sessions and bcrypt-hashed passwords.
+- **Browse menu by category** — explore food items filtered by category.
+- **Cart management** — add/remove items with quantities, persisted per logged-in user.
+- **Stripe Checkout** — hosted payment flow with delivery charges applied.
+- **Payment verification** — order is confirmed or rolled back based on payment outcome.
+- **My Orders** — view past orders with live status (e.g. *Food Processing*).
+- **App download and footer sections** — marketing/landing components included.
 
 ### Admin (Dashboard)
-- ➕ **Add food items** — upload product image (via Multer) with name, description, price, and category.
-- 📋 **List & remove items** — view the full catalog and delete entries.
-- 🚚 **Order management** — list all orders and update their delivery status.
-- 🔔 **Toast notifications** — user feedback via React-Toastify.
+- **Add food items** — upload a product image (via Multer) with name, description, price, and category.
+- **List and remove items** — view the full catalog and delete entries.
+- **Order management** — list all orders and update their delivery status.
+- **Toast notifications** — user feedback via React-Toastify.
 
 ### Backend (API)
-- 🌐 **RESTful endpoints** for food, users, cart, and orders.
-- 🛡️ **JWT auth middleware** protecting cart and order routes.
-- 🖼️ **Static image serving** of uploaded food images.
-- 🧾 **Input validation** for emails and password strength.
+- **RESTful endpoints** for food, users, cart, and orders.
+- **JWT auth middleware** protecting cart and order routes.
+- **Static image serving** of uploaded food images.
+- **Input validation** for emails and password strength.
 
 ---
 
-## 🧰 Tech Stack
+## Tech Stack
 
 **Frontend & Admin**
-- [React 18](https://react.dev/) with Hooks & Context API
-- [Vite 5](https://vitejs.dev/) (dev server + build)
+- [React 18](https://react.dev/) with Hooks and Context API
+- [Vite 5](https://vitejs.dev/) (dev server and build)
 - [React Router DOM 6](https://reactrouter.com/)
 - [Axios](https://axios-http.com/) for API calls
 - [React-Toastify](https://fkhadra.github.io/react-toastify/) (admin notifications)
-- Plain CSS modules per component
+- Plain CSS per component
 
 **Backend**
-- [Node.js](https://nodejs.org/) + [Express 4](https://expressjs.com/)
+- [Node.js](https://nodejs.org/) and [Express 4](https://expressjs.com/)
 - [MongoDB](https://www.mongodb.com/) via [Mongoose 8](https://mongoosejs.com/)
 - [JSON Web Token](https://github.com/auth0/node-jsonwebtoken) (authentication)
 - [bcrypt](https://github.com/kelektiv/node.bcrypt.js) (password hashing)
@@ -83,25 +83,13 @@ It solves the common problem of running an online food business end-to-end: cata
 
 ---
 
-## 🖼️ Screenshots / Demo
-
-> ⚠️ No live demo is deployed yet. Replace the placeholder images below with real screenshots once available.
-
-| Storefront | Cart & Checkout | Admin Dashboard |
-| --- | --- | --- |
-| ![Storefront placeholder](https://placehold.co/600x400?text=Storefront) | ![Cart placeholder](https://placehold.co/600x400?text=Cart+%26+Checkout) | ![Admin placeholder](https://placehold.co/600x400?text=Admin+Dashboard) |
-
-<!-- TODO: Add a GIF/video walkthrough and a live demo link here. -->
-
----
-
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/) **v18+** and npm
+- [Node.js](https://nodejs.org/) v18+ and npm
 - A [MongoDB](https://www.mongodb.com/) database (local instance or [MongoDB Atlas](https://www.mongodb.com/atlas))
-- A [Stripe](https://dashboard.stripe.com/) account with a **test** secret key
+- A [Stripe](https://dashboard.stripe.com/) account with a test secret key
 
 ### 1. Clone the repository
 
@@ -130,7 +118,7 @@ npm install
 
 ### 3. Configure environment variables
 
-Create a `.env` file inside the `backend/` directory:
+Create a `.env` file inside the `backend/` directory (see `backend/.env.example`):
 
 ```bash
 # backend/.env
@@ -140,12 +128,12 @@ JWT_SECRET=your_jwt_secret_here
 
 # Stripe secret key (use a test key during development)
 STRIPE_SECRET_KEY=your_stripe_key
-MONGO_URI=your_mongo_url
+
+# MongoDB connection string
+MONGO_URI=your_mongo_uri
 
 # Optional — defaults to 4000 if unset
 PORT=4000
-
-# Recommended — see security note below
 ```
 
 ### 4. Run the apps locally
@@ -153,35 +141,35 @@ PORT=4000
 Open three terminals (one per app):
 
 ```bash
-# Terminal 1 — Backend API → http://localhost:4000
+# Terminal 1 — Backend API -> http://localhost:4000
 cd backend
 npm start
 ```
 
 ```bash
-# Terminal 2 — Customer frontend → http://localhost:5174
+# Terminal 2 — Customer frontend -> http://localhost:5174
 cd frontend
 npm run dev
 ```
 
 ```bash
-# Terminal 3 — Admin dashboard → http://localhost:5173 (default Vite port)
+# Terminal 3 — Admin dashboard -> http://localhost:5173 (default Vite port)
 cd admin
 npm run dev
 ```
 
-> ℹ️ The backend's Stripe success/cancel redirect is hardcoded to `http://localhost:5174` (the frontend). If your frontend runs on a different port, update `frontendUrl` in [backend/controllers/orderController.js](backend/controllers/orderController.js).
+> Note: The backend's Stripe success/cancel redirect is hardcoded to `http://localhost:5174` (the frontend). If your frontend runs on a different port, update `frontendUrl` in [backend/controllers/orderController.js](backend/controllers/orderController.js).
 > <!-- TODO: Confirm the admin dev port — Vite defaults to 5173 but may shift to 5175 if 5173/5174 are taken. -->
 
 ---
 
-## 📜 Available Scripts
+## Available Scripts
 
 ### Backend (`backend/`)
 
 | Command | Description |
 | --- | --- |
-| `npm start` | Starts the Express API with **nodemon** (live reload) on port `4000`. |
+| `npm start` | Starts the Express API with nodemon (live reload) on port `4000`. |
 
 ### Frontend & Admin (`frontend/`, `admin/`)
 
@@ -194,7 +182,7 @@ npm run dev
 
 ---
 
-## 🗂️ Project Structure
+## Project Structure
 
 ```text
 Food App/
@@ -216,7 +204,7 @@ Food App/
 │       ├── components/       # Navbar, Header, Footer, FoodItem, ExploreMenu, ...
 │       ├── context/          # StoreContext (cart, token, API base URL)
 │       ├── pages/            # Home, Cart, PlaceOrder, MyOrders, Verify
-│       └── assets/           # Images & static food data
+│       └── assets/           # Images and static food data
 │
 ├── admin/                    # Admin dashboard React app (Vite)
 │   ├── vite.config.js
@@ -230,26 +218,26 @@ Food App/
 
 ---
 
-## ☁️ Deployment
+## Deployment
 
-> ⚠️ This project is **not yet deployed**. The steps below are a general guide.
+> This project is not yet deployed. The steps below are a general guide.
 
 A typical deployment splits the three apps:
 
 1. **Database** — Provision a managed MongoDB instance (e.g. [MongoDB Atlas](https://www.mongodb.com/atlas)) and copy its connection string into `MONGO_URI`.
 2. **Backend API** — Deploy `backend/` to a Node host (e.g. [Render](https://render.com/), [Railway](https://railway.app/), or a VPS). Set `JWT_SECRET`, `STRIPE_SECRET_KEY`, `MONGO_URI`, and `PORT` as environment variables.
-   - Note: uploaded images are stored on the local `uploads/` disk. For a stateless host, switch to object storage (e.g. S3/Cloudinary).
+   - Uploaded images are stored on the local `uploads/` disk. For a stateless host, switch to object storage (e.g. S3/Cloudinary).
 3. **Frontend & Admin** — Build each (`npm run build`) and deploy the static `dist/` output to a static host (e.g. [Vercel](https://vercel.com/) or [Netlify](https://www.netlify.com/)).
-   - Replace the hardcoded `http://localhost:4000` API base URLs (in `frontend/src/context/StoreContext.jsx` and the admin app) with your deployed API URL — ideally via an environment variable.
+   - Replace the hardcoded `http://localhost:4000` API base URLs (in `frontend/src/context/StoreContext.jsx` and the admin app) with your deployed API URL, ideally via an environment variable.
    - Update the Stripe redirect `frontendUrl` in the backend to your deployed frontend URL.
 
 <!-- TODO: Add provider-specific deployment configs (e.g. vercel.json, render.yaml, Dockerfile) once a target is chosen. -->
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
-Contributions are welcome! To propose a change:
+Contributions are welcome. To propose a change:
 
 1. Fork the repository.
 2. Create a feature branch: `git checkout -b feature/your-feature`.
@@ -261,16 +249,16 @@ Please run `npm run lint` in the affected app before submitting, and avoid commi
 
 ---
 
-## 📄 License
+## License
 
-This project is licensed under the **ISC License** (as declared in `backend/package.json`).
+This project is licensed under the ISC License (as declared in `backend/package.json`).
 <!-- TODO: Add a LICENSE file at the repo root to make the license explicit. -->
 
 ---
 
-## 👤 Author / Contact
+## Author / Contact
 
-**Furqan Abbas**
+**Muhammad Furqan Abbas**
 
 - GitHub: [@mfurqanabbas20](https://github.com/mfurqanabbas20)
 - Email: mfurqanabbas20@gmail.com
